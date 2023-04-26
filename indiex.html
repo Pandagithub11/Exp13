@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+
+<script>
+  // Don't register the service worker
+  // until the page has fully loaded
+  window.addEventListener('load', () => {
+    // Is service worker available?
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(() => {
+        console.log('Service worker registered!');
+      }).catch((error) => {
+        console.warn('Error registering service worker:');
+        console.warn(error);
+      });
+    }
+  });
+
+
+    </script>
+    <h1>Hello good night</h1>
+    <h2>Helloooooooo</h2>
+    
+</body>
+
+</html>
